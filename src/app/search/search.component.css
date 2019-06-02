@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+.main-content{
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 0px;
+    width: 35%;
+    position: relative;
+    margin: auto;
+}
+#serarchText{
+    width: 315px;
+}
+.title{
+    border: 1px solid #ddd;
+    margin: 0px -10px;
+    padding: 12px;
+    font-size: 28px;
+}
+.body{
+    font-size: 18px;
+}
+.content, .image{
+    width:50%;
+    display: inline-block;
+    vertical-align: text-top;
+}
+.image{
+    text-align: right;
+}
+#countryList{
+    list-style: none;
+    height: 230px;
+    overflow-y: auto;
+    width:350px
+}
+#search{
+    position: relative;
+}
+#countryList{
+    position: absolute;
+    top:10px;
+    left: -35px;
+}
+.label{
+    font-weight: bold;
+}
+.countryName{
+    cursor: pointer;
+}

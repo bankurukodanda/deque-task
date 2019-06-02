@@ -1,0 +1,51 @@
+<div class="details">
+
+  <span class="title">{{details.name}}</span>
+  <table>
+    <tr>
+      <td>
+        Captial
+      </td>
+      <td>
+        {{details.capital}}
+      </td>
+    </tr>
+    
+    <tr>
+        <td>
+          Region
+        </td>
+        <td>
+          {{details.region}}
+        </td>
+      </tr>
+      
+    <tr>
+        <td>
+            Calling Codes
+        </td>
+        <td>
+          <span *ngFor="let code of details.callingCodes; let last = last">{{code}}<span *ngIf="!last">, </span></span>
+        </td>
+      </tr>
+      
+    <tr>
+        <td>
+            currencies
+        </td>
+        <td>
+            <span *ngFor="let currency of details.currencies; let last = last">{{currency.name}} ({{currency.symbol}})<span *ngIf="!last">, </span></span>
+        </td>
+      </tr>
+      
+    <tr>
+        <td>
+          Languages
+        </td>
+        <td>
+            <span *ngFor="let language of details.languages; let last = last">{{language.name}} ({{language.nativeName}})<span *ngIf="!last">, </span></span>
+        </td>
+      </tr>
+      
+  </table>
+</div>

@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "deployUrl": "/deque-task/content/",
             "outputPath": "dist/deque-task",
             "index": "src/index.html",
             "main": "src/main.ts",

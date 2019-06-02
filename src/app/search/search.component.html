@@ -1,0 +1,18 @@
+<div id="search">
+  <input type="text" (keyup)="search($event, null)" [(ngModel)]="selectedCodes" [value]="selectedCode" list="browsers" id="serarchText">
+<ul id="countryList" (click)="selectCountry($event)" *ngIf="dispalyCountryList">
+  <li *ngFor="let country of allCountries | filter:selectedCodes" class="countryName" [attr.data-countryCode]="country.alpha3Code">{{country.name}} ( {{country.alpha3Code}})</li>
+</ul>
+  <div class="main-content" *ngIf="dispalyDetails">
+    <div class="title">{{countryName}}</div>
+    <div class="body">
+      <div class="content">
+
+        <div class="details"><span class="label">Language: </span><span *ngFor="let lang of countryLang; let last = last">{{lang.name}}<span *ngIf="!last">, </span></span></div>
+        <div class="details" ><span class="label">Neighbours: </span><span *ngFor="let country of neighbourCountries; let last = last" routerLink="/detail/{{country.alpha3Code}}" class="countryName">{{country.name}}<span *ngIf="!last">, </span></span></div>
+      </div>
+      <div class="image"><img [src]="countryFlag" alt="Flag" width="150px" height="100px"></div>
+    </div>
+  </div>
+
+</div>

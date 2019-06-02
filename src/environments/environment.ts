@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  endpoint: {
+    countriesFromCode: "http://localhost:8080/deque/countryCode/",
+    allCountries:"http://localhost:8080/deque/allCountryCodes/",
+    countryDetails: "http://localhost:8080/deque/countryDetails/",
+    getDetails:"http://localhost:8080/deque/getDetails/"
+  }
 };
 
 /*

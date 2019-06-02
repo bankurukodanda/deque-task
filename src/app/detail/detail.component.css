@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+  }
+  
+  table, tr, td {
+    border: 1px solid #ddd;
+    padding: 7px;
+  }
+  .title{
+    font-weight: bold;
+  }
+  .details{
+      width: 30%;
+      margin: auto;
+      position: relative;
+  }
